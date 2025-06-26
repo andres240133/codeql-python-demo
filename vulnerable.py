@@ -1,10 +1,8 @@
-import os
+def procesar_datos():
+    user_input = input("Ingrese una operación matemática: ")
+    resultado = eval(user_input)  # ← Código vulnerable
+    print("Resultado:", resultado)
 
-def ejecutar_comando(usuario):
-    comando = f"ping {usuario}"  # <- Riesgo: el input se inserta directamente en un comando del sistema
-    os.system(comando)
-
-nombre = input("Ingrese dirección IP o dominio: ")
-ejecutar_comando(nombre)
+procesar_datos()
 
 
